@@ -88,10 +88,9 @@ def comments_new():
         'playlist_id': ObjectId(request.form.get('playlist_id'))
     }
     print(comment)
-    comment_id = comments.insert_one(comment).inserted_id
+    comments.insert_one(comment)
     return redirect(url_for('playlists_show',
-                            playlist_id=request.form.get('playlist_id'),
-                            comment_id=comment_id))
+                            playlist_id=request.form.get('playlist_id')))
 
 
 @app.route('/playlists/comments/<comment_id>', methods=['POST'])
