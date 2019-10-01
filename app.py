@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from unittest import TestCase, main as unittest_main
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from datetime import datetime
@@ -91,7 +90,8 @@ def comments_new():
     print(comment)
     comment_id = comments.insert_one(comment).inserted_id
     return redirect(url_for('playlists_show',
-                            playlist_id=request.form.get('playlist_id')))
+                            playlist_id=request.form.get('playlist_id'),
+                            comment_id=comment_id))
 
 
 @app.route('/playlists/comments/<comment_id>', methods=['POST'])
