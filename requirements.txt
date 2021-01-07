@@ -33,7 +33,7 @@ jedi==0.14.1
 Jinja2==2.10.1
 jiphy==1.2.2
 lazy-object-proxy==1.4.2
-lxml==4.4.1
+lxml==4.6.2
 MarkupSafe==1.1.1
 mccabe==0.6.1
 more-itertools==7.2.0
