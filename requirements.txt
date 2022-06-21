@@ -39,7 +39,7 @@ mccabe==0.6.1
 more-itertools==7.2.0
 mysqlclient==1.4.4
 nltk==3.4.5
-numpy==1.17.1
+numpy==1.22.0
 packaging==19.1
 parso==0.5.1
 Pattern==3.6
